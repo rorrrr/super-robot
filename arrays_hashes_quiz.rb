@@ -37,11 +37,11 @@ my_hash = {"0" => "Zero", 1 => "One", :two => "Two", "two" => 2}
 # 3. How would you return the number `2`?
 # puts my_hash["two"]
 # 4. How would you add `{3 => "Three"}` to the hash?
-my_hash[3] = "Three"
-puts my_hash
-# 5. How would you add `{:four => 4}` to the hash?
-my_hash[:four] = 4
-puts my_hash
+# my_hash[3] = "Three"
+# puts my_hash
+# # 5. How would you add `{:four => 4}` to the hash?
+# my_hash[:four] = 4
+# puts my_hash
 
 ### C. Given the following data structure:
 
@@ -78,19 +78,31 @@ users = {
 }
 
 # 1. Return Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
-
+# puts users["Jonathan"][:twitter]
 # 2. Return Erik's hometown
-
+# puts users["Erik"][:home_town]
 # 3. Return the array of Erik's favorite numbers
-
+# puts users["Erik"][:favourite_numbers]
 # 4. Return the type of Avril's pet Colin
-
+# puts users["Avril"][:pets]["colin"]
 # 5. Return the smallest of Erik's favorite numbers
-
+# puts users["Erik"][:favourite_numbers].min
 # 6. Add the number `7` to Erik's favorite numbers
-
+# users["Erik"][:favourite_numbers].push(7)
+# puts users["Erik"][:favourite_numbers]
 # 7. Change Erik's hometown to Edinburgh
-
+# users["Erik"][:home_town] = "Edinburgh"
+# puts users["Erik"][:home_town] 
 # 8. Add a pet dog to Erik called "Fluffy"
-
+# users["Erik"][:pets]["Fluffy"] = :dog
+# puts users["Erik"][:pets]
 # 9. Add yourself to the users hash
+# users["Rory"] = {
+#     :twitter => "rorrrr",
+#     :favourite_numbers => [69, 420],
+#     :home_town => "Dubai",
+#     :pets => {
+#       "mak" => :dog
+#     }
+#   }
+#   puts users["Rory"]
